@@ -1,0 +1,12 @@
+version: "3.4"
+services:
+  flaskserver:
+    container_name: flask
+    build: .
+    ports:
+      - "5001:5001"
+  node-server:
+    container_name: frontend
+    build: ./front-end
+    ports:
+      - "3001:3000"

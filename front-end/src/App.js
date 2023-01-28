@@ -20,7 +20,7 @@ function App() {
   useEffect(() => {
     if (buttonStatus === true) {
       let socket;
-      socket = io("localhost:5001/", {
+      socket = io("flaskserver:5001/", {
         transports: ["websocket"],
         cors: {
           origin: "http://localhost:3000/",
