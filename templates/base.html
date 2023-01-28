@@ -1,0 +1,33 @@
+  <!DOCTYPE html>
+  <head>
+    <title>Playground</title>
+    <link
+      rel="shortcut icon"
+      href="{{ url_for('static', filename='dictionary.png') }}"
+    />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+       <script src="{{url_for('static', filename='script.js')}}"> </script>
+  </head>
+
+  <body>
+    <img src="{{ url_for('static', filename='dictionary.png') }}" class="icon" />
+    <h3>My Dictionary</h3>
+    <form action="/" method="post">
+        <div class="form-container">
+            <input type="text" name="translate" placeholder="Enter a word" required id="translate-input"/>
+            <select name="functions" id="functions-select">
+                <option value="sw">Sentence from word</option>
+                <option value="mw">Meaning of the word</option>
+                <option value="ms">Meaning of the sentence</option>
+            </select>
+        </div>
+        <div class="button-container">
+            <input type="submit" value="Generate sentence" id="generate-button" />
+        </div>
+    </form>
+
+    {% if result %}
+    <div class="result">{{ result }}</div>
+    {% endif %}
+
+  </body>
