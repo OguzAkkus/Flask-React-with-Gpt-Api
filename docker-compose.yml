@@ -9,4 +9,4 @@ services:
     container_name: frontend
     build: ./front-end
     ports:
-      - "3001:3000"
+      - "3000:3000"
