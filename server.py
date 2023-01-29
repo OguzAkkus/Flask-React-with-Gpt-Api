@@ -61,4 +61,4 @@ def handle_selected_function(data):
 
 
 if __name__ == '__main__':
-    socketio.run(app, debug=True, port=5001)
+    socketio.run(app, debug=True, host="0.0.0.0", port=5001)
