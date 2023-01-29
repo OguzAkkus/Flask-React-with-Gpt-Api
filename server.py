@@ -35,8 +35,8 @@ def handle_message(data):
     """event listener when client types a message"""
     print("data from the front end: ", data)
     # data = Trans(data).process()
-    print(data)
-    data = data["choices"][0]["text"].strip("\n")
+    data = data['message']
+    # data = data["choices"][0]["text"].strip("\n")
     emit("data", {'data': data, 'id': request.sid}, broadcast=True)
 
 
