@@ -20,10 +20,10 @@ function App() {
   useEffect(() => {
     if (buttonStatus === true) {
       let socket;
-      socket = io("0.0.0.0:5001/", {
+      socket = io("192.168.0.6:5001/", {
         transports: ["websocket"],
         cors: {
-          origin: "http://0.0.0.0:3000/",
+          origin: "http://--CORSS--:3000/",
         },
       });
 
